@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A32AB9A2479F161005F4B1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A32AB992479F161005F4B1D /* AppDelegate.swift */; };
 		2A32AB9C2479F161005F4B1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A32AB9B2479F161005F4B1D /* SceneDelegate.swift */; };
-		2A32AB9E2479F161005F4B1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A32AB9D2479F161005F4B1D /* ViewController.swift */; };
+		2A32AB9E2479F161005F4B1D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A32AB9D2479F161005F4B1D /* ChatViewController.swift */; };
 		2A32ABA12479F161005F4B1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A32AB9F2479F161005F4B1D /* Main.storyboard */; };
 		2A32ABA42479F161005F4B1D /* chatp2p.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A32ABA22479F161005F4B1D /* chatp2p.xcdatamodeld */; };
 		2A32ABA62479F163005F4B1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A32ABA52479F163005F4B1D /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 		2A32AB962479F161005F4B1D /* chatp2p.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatp2p.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A32AB992479F161005F4B1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A32AB9B2479F161005F4B1D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2A32AB9D2479F161005F4B1D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2A32AB9D2479F161005F4B1D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		2A32ABA02479F161005F4B1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A32ABA32479F161005F4B1D /* chatp2p.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = chatp2p.xcdatamodel; sourceTree = "<group>"; };
 		2A32ABA52479F163005F4B1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 			children = (
 				2A32AB992479F161005F4B1D /* AppDelegate.swift */,
 				2A32AB9B2479F161005F4B1D /* SceneDelegate.swift */,
-				2A32AB9D2479F161005F4B1D /* ViewController.swift */,
+				2A32AB9D2479F161005F4B1D /* ChatViewController.swift */,
 				2A32AB9F2479F161005F4B1D /* Main.storyboard */,
 				2A32ABA52479F163005F4B1D /* Assets.xcassets */,
 				2A32ABA72479F163005F4B1D /* LaunchScreen.storyboard */,
@@ -141,7 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A32AB9E2479F161005F4B1D /* ViewController.swift in Sources */,
+				2A32AB9E2479F161005F4B1D /* ChatViewController.swift in Sources */,
 				2A32AB9A2479F161005F4B1D /* AppDelegate.swift in Sources */,
 				2A32ABA42479F161005F4B1D /* chatp2p.xcdatamodeld in Sources */,
 				2A32AB9C2479F161005F4B1D /* SceneDelegate.swift in Sources */,
@@ -291,6 +291,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7CS39R779;
 				INFOPLIST_FILE = chatp2p/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +299,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = gabrielferreira.chatp2p;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,6 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7CS39R779;
 				INFOPLIST_FILE = chatp2p/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +318,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = gabrielferreira.chatp2p;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
