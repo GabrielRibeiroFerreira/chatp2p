@@ -70,12 +70,12 @@ class ChatViewController: UIViewController, MCSessionDelegate, MCBrowserViewCont
     //MARK: -Connection
     @IBAction func connection(_ sender: Any) {
         if self.mcSession.connectedPeers.count == 0 && !hosting {
-            let connectActionSheet = UIAlertController(title: "our chat", message: "do you wnat to host or join a chat?", preferredStyle: .actionSheet)
+            let connectActionSheet = UIAlertController(title: "our chat", message: "do you want to host or join a chat?", preferredStyle: .actionSheet)
             
             connectActionSheet.addAction(UIAlertAction(title: "host chat", style: .default, handler: { (action : UIAlertAction) in
                 
                 //SEARCH LATER
-                self.mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "doest-matter", discoveryInfo: nil, session: self.mcSession)
+                self.mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "doesnt-matter", discoveryInfo: nil, session: self.mcSession)
                 self.mcAdvertiserAssistant.start()
                 self.hosting = true
                 
@@ -84,7 +84,7 @@ class ChatViewController: UIViewController, MCSessionDelegate, MCBrowserViewCont
             connectActionSheet.addAction(UIAlertAction(title: "join chat", style: .default, handler: { (action : UIAlertAction) in
                 
                 //SEARCH LATER
-                let mcBrowser = MCBrowserViewController(serviceType: "oest-matter", session: self.mcSession)
+                let mcBrowser = MCBrowserViewController(serviceType: "doesnt-matter", session: self.mcSession)
                 mcBrowser.delegate = self
                 self.present(mcBrowser, animated: true, completion: nil)
                 
@@ -95,7 +95,7 @@ class ChatViewController: UIViewController, MCSessionDelegate, MCBrowserViewCont
             self.present(connectActionSheet, animated: true, completion: nil)
             
         } else if self.mcSession.connectedPeers.count == 0 && hosting {
-            let waitActionSheet = UIAlertController(title: "waiting...", message: "waiting for otherto join the chat", preferredStyle: .actionSheet)
+            let waitActionSheet = UIAlertController(title: "waiting...", message: "waiting for other to join the chat", preferredStyle: .actionSheet)
             waitActionSheet.addAction(UIAlertAction(title: "Disconnect", style: .destructive, handler: { (action) in
                 
                 self.mcSession.disconnect()
@@ -163,6 +163,8 @@ class ChatViewController: UIViewController, MCSessionDelegate, MCBrowserViewCont
     func browserViewControllerWasCancelled(_ browserViewController: MCBrowserViewController) {
         dismiss(animated: true, completion: nil)
     }
+    
+    
     
 }
 
