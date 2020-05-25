@@ -26,15 +26,19 @@ class ChatViewController: UIViewController, MCSessionDelegate, MCBrowserViewCont
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.peerID = MCPeerID(displayName: UIDevice.current.name)
-        self.mcSession = MCSession(peer: self.peerID, securityIdentity: nil, encryptionPreference: .required)
-        self.mcSession.delegate = self
+        self.setupConnectivity()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.removeKeyboard(_:)))
         self.view.addGestureRecognizer(tap)
         
         self.sendButton.isEnabled = false
         self.chatTextView.isEditable = false
+    }
+    
+    func setupConnectivity() {
+        self.peerID = MCPeerID(displayName: UIDevice.current.name)
+        self.mcSession = MCSession(peer: self.peerID, securityIdentity: nil, encryptionPreference: .required)
+        self.mcSession.delegate = self
         
         self.hosting = false
     }
@@ -163,8 +167,5 @@ class ChatViewController: UIViewController, MCSessionDelegate, MCBrowserViewCont
     func browserViewControllerWasCancelled(_ browserViewController: MCBrowserViewController) {
         dismiss(animated: true, completion: nil)
     }
-    
-    
-    
 }
 
